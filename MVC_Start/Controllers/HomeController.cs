@@ -11,10 +11,22 @@ namespace MVC_Start.Controllers
   {
     public IActionResult Index()
     {
-      return View();
+        GuestContact contact = new GuestContact();
+        contact.Name = "Rameez";
+        contact.Phone = "9048640208";
+        contact.Email = "rb@usf.edu";
+        return View(contact);
     }
+    [HttpPost]
+    public IActionResult Index(GuestContact contact)
+        {
+            char[] arr = contact.Name.ToCharArray();
+            Array.Reverse(arr);
+            contact.Name = new string(arr);
+            return View(contact);
+        }
 
-    public IActionResult IndexWithLayout()
+public IActionResult IndexWithLayout()
     {
       return View();
     }
