@@ -1,0 +1,25 @@
+<head>
+<scriptsrc="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js">
+</script>
+</head>
+<body>
+<h1> Bar chart example</h1>
+<canvasid="barchartexample"width="800"height="450"></canvas>
+<script>
+newChart(document.getElementById("barchartexample"), {
+type: '@Model.ChartType',
+data: {
+labels: [<!-- x-axis labels -->],
+datasets: [                
+ {
+<!-- one series of y-axis data -->                
+}, { <!-- more y-axis series-->}               
+]            
+},
+options: {
+<!-- chart options such as titles-->             
+}           
+});
+</script>
+</body>
+</html>
