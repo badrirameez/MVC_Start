@@ -14,7 +14,7 @@ namespace MVC_Start.Controllers
         GuestContact contact = new GuestContact();
         contact.Name = "Rameez";
         contact.Phone = "9048640208";
-        contact.Email = "rb@usf.edu";
+        contact.Email = "rbadri@usf.edu";
         return View(contact);
     }
     [HttpPost]
