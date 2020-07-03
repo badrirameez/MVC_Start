@@ -1,27 +1,9 @@
 ﻿@model GuestContact
-@{
-    Layout = null;
+@{ Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+    <h2>Welcome to the link that you just clicked!</h2>
+    <p>@Model.Name, (this value is from Index controller)</p>
+    <p>@Model.id, (you have passed this value from your Home page)</p>
+    <p>@Model.testText, (you have passed this value from your Home page)</p>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <h2>Hello world Hello Hello!</h2>
-    <p>@Model.Name</p>
-    <p>@Model.Email</p>
-    <p>@Model.Phone</p>
-
-    <form asp-controller="Home" asp-action="Index" method="post">
-        <p>Name: <input asp-for="Name" /></p>
-        <p>Email: <input asp-for="Email" /></p>
-        <p>Phone number: <input asp-for="Phone" /></p>
-        <button type ="submit">Submit</button>
-    </form>
-
-</body>
-</html>
