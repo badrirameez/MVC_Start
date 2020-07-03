@@ -9,13 +9,15 @@ namespace MVC_Start.Controllers
 {
   public class HomeController : Controller
   {
-    public IActionResult Index()
+        public IActionResult Index(int id)
     {
-        GuestContact contact = new GuestContact();
-        contact.Name = "Rameez";
-        contact.Phone = "9048640208";
-        contact.Email = "rameezbadri@usf.edu";
-        return View(contact);
+            GuestContact contact = new GuestContact();
+            contact.Name = "Rameez";
+            contact.id = id;
+           // contact.testText = d.TryGetValue("Name", out Name);
+       // contact.Phone = "9048640208";
+       // contact.Email = "rameezbadri@usf.edu";
+            return View(contact);
     }
     [HttpPost]
     public IActionResult Index(GuestContact contact)
@@ -55,5 +57,23 @@ public IActionResult IndexWithLayout()
 
       return View(Model);
     }
-  }
+
+        public IActionResult InClassHtmlLinks()
+        {
+            GuestContact contact = new GuestContact();
+            contact.Name = "Rameez HTML";
+            contact.Phone = "9048640208";
+            contact.Email = "rameezbadri@usf.edu";
+            return View(contact);
+        }
+       
+        [HttpPost]
+        public IActionResult InClassHtmlLinks(GuestContact contact)
+        {
+            char[] arr = contact.Name.ToCharArray();
+            Array.Reverse(arr);
+            contact.Name = new string(arr);
+            return View(contact);
+        }
+    }
 }

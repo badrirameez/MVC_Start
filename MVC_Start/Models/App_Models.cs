@@ -10,7 +10,9 @@ namespace MVC_Start.Models
     public string Name { get; set; }
     public string Email { get; set; }
     public string Phone { get; set; }
-  }
+    public int id { get; set; }
+    public string testText { get; set; }
+    }
 
   public class ChartModel
   {

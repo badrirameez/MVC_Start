@@ -1,0 +1,29 @@
+﻿@model GuestContact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>In Class Exercise - HTML Links </title>
+</head>
+<body>
+    <h2>Home Page - HTML Links!</h2>
+    <p>@Model.Name</p>
+    <p>@Model.Email</p>
+    <p>@Model.Phone</p>
+
+    <form asp-controller="Home" asp-action="InClassHtmlLinks" method="post">
+        <p>Name: <input asp-for="Name" /></p>
+        <p>Email: <input asp-for="Email" /></p>
+        <p>Phone number: <input asp-for="Phone" /></p>
+        <button type="submit">Submit</button>
+    </form>
+   
+
+    <a asp-controller="Home" asp-action="Index" asp-route-id="14" asp-fragment="notes">Index Page</a>
+</body>
+</html>
