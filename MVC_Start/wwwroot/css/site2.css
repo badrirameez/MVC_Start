@@ -24,11 +24,11 @@
 }
 
 .footer {
-  margin: 80px;
-  padding-right: 200px;
-  font-size: smaller;
-  text-align: left;
-  border: 3px dotted #006747;
+    margin: 80px;
+    padding-right: 200px;
+    font-size: smaller;
+    text-align: left;
+    border: 3px dotted #006747;
 }
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {

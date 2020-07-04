@@ -4,9 +4,20 @@
 }
 
     <form asp-controller="Home" asp-action="InClassHtmlLinks" method="post">
-        <p>Name: <input asp-for="Name" /></p>
-        <p>Email: <input asp-for="Email" /></p>
-        <p>Phone number: <input asp-for="Phone" /></p>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input asp-for="Name" /></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input asp-for="Email" /></td>
+            </tr>
+            <tr>
+                <td>Phone number: </td>
+                <td><input asp-for="Phone" /></td>
+            </tr>
+        </table>
         <button type="submit">Submit</button>
     </form>
    
