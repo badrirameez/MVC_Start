@@ -62,8 +62,8 @@ public IActionResult IndexWithLayout()
         {
             GuestContact contact = new GuestContact();
             contact.Name = "Rameez HTML";
-            contact.Phone = "9048640208";
-            contact.Email = "rameezbadri@usf.edu";
+            contact.Phone = "4544545";
+            contact.Email = "rb@usf.edu";
             return View(contact);
         }
        
